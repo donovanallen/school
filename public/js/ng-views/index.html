@@ -1,0 +1,11 @@
+<h1>Students</h1>
+
+<p data-ng-repeat="student in vm.students">
+<a data-ui-sref="show({name: student.name})">{{student.name}}, {{student.age}}</a>
+</p>
+
+<form data-ng-submit="vm.create()">
+  <input type="text" ng-model="vm.newStudent.name" placeholder="Name">
+  <input type="text" ng-model="vm.newStudent.age" placeholder="Age">
+  <button type="submit">Enroll</button>
+</form>
